@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProdutoAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ProdutoAPI.Controllers.ProdutoController.CadastraProduto(ProdutoServico.DTO.Produto)">
+            <summary>
+            Cadastro de produto 
+            </summary>
+            <param name="produto">Produto</param>
+            <returns></returns>
+        </member>
+        <member name="M:ProdutoAPI.Controllers.ProdutoController.AlterarProduto(ProdutoServico.DTO.Produto)">
+            <summary>
+            Alteracao do produto
+            </summary>
+            <param name="produto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ProdutoAPI.Controllers.ProdutoController.RemoverProduto(System.Int32)">
+            <summary>
+            Remover o produto
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
