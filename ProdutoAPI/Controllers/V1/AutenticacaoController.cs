@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using ProdutoAPI.Token;
+using ProdutoServico.DTO;
 
 namespace ProdutoAPI.Controllers.V1
 {
@@ -19,14 +20,14 @@ namespace ProdutoAPI.Controllers.V1
         [HttpGet]
         [Route("GerarToken")]
         [AllowAnonymous]
-        public object GerarToken() 
+        public Autenticacao GerarToken() 
         {
             var token = new Gerar().Token(_configuration.GetSection("AppSettings:Segredo").Value);
 
-            return new
+            return new Autenticacao()
             {
-                autenticado = true,
-                token = token
+                Autenticado =  true,
+                Token = token
             };
         }
     }
